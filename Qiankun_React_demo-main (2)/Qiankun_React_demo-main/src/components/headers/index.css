@@ -1,0 +1,25 @@
+.container-headers ul {
+  padding: 0px;
+  margin: 0px;
+  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container-headers ul::before {
+  content: url(/zhichi.jpg);
+}
+.container-headers ul li {
+  font-size: 18px;
+  font-weight: bolder;
+  margin: 10px auto;
+  color: #545D69;
+  text-decoration: none;
+  list-style-type: none;
+}
+.container-headers ul li:hover {
+  cursor: pointer;
+}
+.container-headers ul li:active {
+  color: #38BDBF;
+}

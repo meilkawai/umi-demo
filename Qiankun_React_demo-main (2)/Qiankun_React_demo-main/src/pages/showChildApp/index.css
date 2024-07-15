@@ -1,0 +1,26 @@
+.container-showchild .left {
+  position: absolute;
+  left: 0;
+  width: 130px;
+  height: 100%;
+  background-color: #bee9ec;
+  display: block;
+  display: flex;
+  flex-direction: column;
+}
+.container-showchild .left .showchildren-list {
+  text-align: center;
+  margin-top: 60px;
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #545D69;
+}
+.container-showchild .left .showchildren-list:hover {
+  color: #38BDBF;
+  cursor: pointer;
+}
+.container-showchild .right {
+  height: 100%;
+  margin-left: 130px;
+}

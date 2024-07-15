@@ -1,0 +1,39 @@
+@img-width: 100px;
+@zhichi-font-highlight:#38BDBF;
+@zhichi-font-normal:#545D69;
+
+// @img-height:68px;
+// 媒体查询
+.container-headers {
+
+  ul {
+    // position: absolute;
+    padding: 0px;
+    margin: 0px;
+    display: block;
+    // width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &::before{
+      content: url(/zhichi.jpg);
+    }
+
+    li {
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:active {
+        color: @zhichi-font-highlight;
+      }
+
+      font-size: 18px;
+      font-weight: bolder;
+      margin: 10px auto;
+      color:@zhichi-font-normal;
+      text-decoration: none;
+      list-style-type: none;
+    }
+  }
+}

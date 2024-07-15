@@ -1,0 +1,12 @@
+.Tabs {
+  text-align: center;
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #545D69;
+  margin-left: 10PX;
+}
+.Tabs:hover {
+  color: #38BDBF;
+  cursor: pointer;
+}

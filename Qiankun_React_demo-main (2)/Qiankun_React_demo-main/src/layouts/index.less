@@ -1,0 +1,26 @@
+@zhichi-font-highlight: #38BDBF;
+@zhichi-font-normal: #545D69;
+
+.container-layout {
+    text-align: center;
+
+    // position: relative;
+    .contentShow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        width: 75%;
+        font-size: 32px;
+        font-weight: bold;
+        color: @zhichi-font-normal;
+
+        &:hover {
+            color: @zhichi-font-highlight;
+            cursor: pointer;
+        }
+    }
+
+
+}

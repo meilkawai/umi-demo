@@ -1,0 +1,11 @@
+.item {
+  width: 500px;
+  top: 5%;
+  margin: 50px auto;
+  display: flex;
+}
+
+
+.item .TableColumns {
+  flex: 1
+}

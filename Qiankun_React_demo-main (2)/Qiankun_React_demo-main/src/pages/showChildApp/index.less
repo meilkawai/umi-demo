@@ -1,0 +1,42 @@
+@zhichi-font-highlight: #38BDBF;
+@zhichi-font-normal: #545D69;
+@aside-width:130px;
+
+.container-showchild {
+    .left {
+        position: absolute;
+        left: 0;
+        width: @aside-width;
+        height: 100%;
+        background-color: #bee9ec;
+        display: block;
+        display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // margin: 10px auto;
+        flex-direction: column;
+
+        .showchildren-list {
+            text-align: center;
+            // flex: 1;
+            margin-top: 60px;
+            display: block;
+            // width: 75%;
+            font-size: 24px;
+            font-weight: bold;
+            color: @zhichi-font-normal;
+
+            &:hover {
+                color: @zhichi-font-highlight;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .right {
+        height: 100%;
+        margin-left: @aside-width;
+        // background-color: orange;
+    }
+
+}
