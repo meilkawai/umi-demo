@@ -21,3 +21,6 @@
 ```
 npm install
 ```
+```
+npm start  &&  nodemon .\app.js
+```
