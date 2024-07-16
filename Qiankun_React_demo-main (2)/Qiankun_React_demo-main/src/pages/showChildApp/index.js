@@ -24,7 +24,7 @@ export default function ShowChildApp() {
       <Link className='showchildren-list' to='/showChildApp' >主应用</Link>
         {/* <div className='showchildren-list' onClick={goToDetai}>主应用</div> */}
 
-        <div className='showchildren-list'>子应用</div>
+        <Link className='showchildren-list' to='/m-umi'>子应用</Link>
      </div>
      <div className='right'>
      <TabAside></TabAside>

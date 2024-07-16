@@ -8,8 +8,16 @@ from
 ;
 import  {UserModal}  from "../../components/formCategoryList";
 
-function CategoryPage({category}) {
-
+function CategoryPage({category,dispatch}) {
+  const onFinish = (value) => {
+    // console.log('success', value);
+    // alert(value)
+    dispatch({
+      // 没跑通
+      type: 'formCategoryList/edit',
+      payLoad: value
+    })
+  }
   const columns = [
     {
       title: 'ID',
@@ -24,9 +32,9 @@ function CategoryPage({category}) {
     {
       title: 'Action',
       key: 'action',
-      render: () => (
+      render: (record) => (
         <Space size="middle">
-          <UserModal >添加</UserModal>
+          <UserModal record={record} onFinish={onFinish}>添加</UserModal>
           <UserModal >删除</UserModal>
         </Space>
       ),

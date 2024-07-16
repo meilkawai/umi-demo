@@ -38,7 +38,11 @@ const CategoryModal = {
                 payLoad: { rows, columns }
             })
             //   yield put('getList')
-
+        },
+        *edit({ payLoad }, { call }) {
+            // console.log('aaa');
+            alert('aaa')
+            yield call(editRecord, { payLoad })
         }
     },
     subscriptions: {

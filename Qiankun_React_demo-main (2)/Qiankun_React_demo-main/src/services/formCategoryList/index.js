@@ -35,5 +35,10 @@ export const getDataAsyncService = async () => {
   // })
 
   const result = await axios.get('/api/category/list');
+  return result 
+}
+export const editRecord = async (parmes) => {
+  console.log(parmes);
+  const result = await axios.put('/api/category/_token/update');
   return result
 }

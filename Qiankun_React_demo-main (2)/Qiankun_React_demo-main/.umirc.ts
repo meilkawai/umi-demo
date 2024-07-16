@@ -12,7 +12,27 @@ export default defineConfig({
     { path: '/404', component: '@/pages/notfound' },
     { path: '/order', component: '@/pages/order' },
 
+    //注册子项目路由
+    {
+      name: 'm-umi',
+      path: '/m-umi',
+      microApp: 'm-umi',
+    },
+
   ],
+  qiankun: {
+    master: {
+      // 注册子应用信息
+      apps: [
+        {
+          name: 'm-umi', // 唯一 id
+          entry: '//localhost:9999', // html entry
+        },
+      ],
+      //   jsSandbox: true, // 是否启用 js 沙箱，默认为 false
+      //   prefetch: true, // 是否启用 prefetch 特性，默认为 true
+    },
+  },
   // fastRefresh: {},
   proxy: {
     '/api': {
