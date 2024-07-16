@@ -1,0 +1,28 @@
+@zhichi-font-highlight: #38BDBF;
+@zhichi-font-normal: #545D69;
+@aside-width: 130px;
+
+.font_(@weight: bold, @size: 16px) {
+    font-size: @size;
+    font-weight: @weight;
+}
+
+._mouse(@color: @zhichi-font-highlight, @cursor: pointer) {
+    color: @zhichi-font-highlight;
+    cursor: @cursor;
+}
+
+._window() {
+    @basic-background-color:@zhichi-font-normal;
+    // background-color: @basic-background-color;
+
+    @media (min-width: 900px) {
+        color:@basic-background-color + @zhichi-font-highlight;
+        font-size: 50px;
+        background-color: @basic-background-color;
+    }
+
+    @media (min-width: 300px) and (max-width: 900px) {
+        color:@basic-background-color - @zhichi-font-highlight;
+    }
+}

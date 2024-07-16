@@ -1,24 +1,29 @@
-@zhichi-font-highlight: #38BDBF;
-@zhichi-font-normal: #545D69;
+// @zhichi-font-highlight: #38BDBF;
+// @zhichi-font-normal: #545D69;
+@import (reference) '../pages/global_style.less';
 
 .container-layout {
+    
     text-align: center;
 
     // position: relative;
     .contentShow {
+        ._window();
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         display: block;
         width: 75%;
-        font-size: 32px;
-        font-weight: bold;
+        // font-size: 32px;
+        // font-weight: bold;
+        .font_(bold,32px);
         color: @zhichi-font-normal;
 
         &:hover {
-            color: @zhichi-font-highlight;
-            cursor: pointer;
+            // color: @zhichi-font-highlight;
+            // cursor: pointer;
+            ._mouse(@zhichi-font-highlight,pointer)
         }
     }
 

@@ -2,6 +2,7 @@ import { Link, history } from 'umi';
 import './index.less';
 
 export default function Headers(props) {
+  
   const goToLoginPage = () => {
     history.push('/login')
   }

@@ -11,13 +11,14 @@
 }
 .container-headers ul li {
   font-size: 18px;
-  font-weight: bolder;
+  font-weight: bold;
   margin: 10px auto;
   color: #545D69;
   text-decoration: none;
   list-style-type: none;
 }
 .container-headers ul li:hover {
+  color: #38BDBF;
   cursor: pointer;
 }
 .container-headers ul li:active {

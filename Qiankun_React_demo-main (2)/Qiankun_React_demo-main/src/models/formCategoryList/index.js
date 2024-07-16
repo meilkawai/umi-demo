@@ -1,5 +1,6 @@
-import { getColumnAsyncService, getDataAsyncService } from '../../services/formCategoryList/index'
+import { getColumnAsyncService, getDataAsyncService, editRecord } from '../../services/formCategoryList/index'
 import { call, put } from 'redux-saga/effects';
+import { resetCatgoryList } from '../../services/api'
 
 const CategoryModal = {
     namespace: 'category',
@@ -7,20 +8,27 @@ const CategoryModal = {
         updateCategory: {
             id: 0,
             name: ""
-        }
+        },
+        token: ''
     },
     reducers: {
         getListData(state, { payLoad }) {
             //    console.log("@@",payLoad);
             return payLoad
         },
+        // 得到修改结果
+        getCateporyListResetResult(state, {payLoad}) {
+            // console.log("@@", payLoad.data);
+            const resultOfPut = payLoad
+            return resultOfPut
+        }
 
         // 得到id
-        async toUpdate(params) {
-            // updateCategory.id = params.id
-            // updateCategory.name = params.name
-            console.log(params);
-        }
+        // async toUpdate(params) {
+        //     // updateCategory.id = params.id
+        //     // updateCategory.name = params.name
+        //     console.log(params);
+        // }
     },
     effects: {
         // 无返回值 void
@@ -39,11 +47,18 @@ const CategoryModal = {
             })
             //   yield put('getList')
         },
-        *edit({ payLoad }, { call }) {
-            // console.log('aaa');
-            alert('aaa')
-            yield call(editRecord, { payLoad })
+        *edit({ payLoad }, { call, put }) {
+            // console.log('payLoad');
+            // alert('aaa')
+            //    const result=  yield call(editRecord, { payLoad })
+            const result = yield call(resetCatgoryList, { payLoad })
+            // console.log("@@@@@", payLoad);  // 请先登录，需要token
+            yield put({
+                type: 'getCateporyListResetResult',
+                payLoad: result
+            })
         }
+
     },
     subscriptions: {
         // 这里面都是函数

@@ -1,20 +1,25 @@
-import { connect,history } from "umi";
-import React from 'react';
+import { connect, history } from "umi";
+import React, { useEffect } from 'react';
 import './index.css'
-import
-{ Table,Space }
-from
-"antd"
-;
-import  {UserModal}  from "../../components/formCategoryList";
+import { Table, Space }
+  from
+  "antd"
+  ;
+import UserModal  from "../../components/formCategoryList";
 
-function CategoryPage({category,dispatch}) {
+function CategoryPage({ category, dispatch }) {
+  // useEffect(() => {
+  //   dispatch({
+  //     // 'model中的namespace'
+  //     type: 'category/getListAsync',
+  //   })
+  // }, [])
   const onFinish = (value) => {
     // console.log('success', value);
     // alert(value)
     dispatch({
-      // 没跑通
-      type: 'formCategoryList/edit',
+      // 'model中的namespace'
+      type: 'category/edit',
       payLoad: value
     })
   }
@@ -34,7 +39,7 @@ function CategoryPage({category,dispatch}) {
       key: 'action',
       render: (record) => (
         <Space size="middle">
-          <UserModal record={record} onFinish={onFinish}>添加</UserModal>
+          <UserModal record={record} onFinish={onFinish}>修改</UserModal>
           <UserModal >删除</UserModal>
         </Space>
       ),
@@ -43,6 +48,12 @@ function CategoryPage({category,dispatch}) {
 
   return (
     <div className="item">
+     {/* <div> <button onClick={()=>{
+        dispatch({
+              // 'model中的namespace'
+              type: 'category/getListAsync',
+            })
+      }}>更新</button></div> */}
       <Table columns={columns} dataSource={category.rows} />
       {/* <UserModal ></UserModal> */}
     </div>
@@ -56,8 +67,8 @@ function CategoryPage({category,dispatch}) {
      [[Prototype]]: Object
    router: {location: {…}, action: 'POP'}
 */
-const mapStateToProps = ({category})=>{
-
+const mapStateToProps = ({ category }) => {
+  // console.log('@@@@@', category);
   return {
     category
   }
