@@ -68,7 +68,7 @@ const UserModal = (props) => {
                     onFinishFailed={onFinishFailed}
                 // autoComplete="off"
                 >
-                    <Form.Item
+                    {/* <Form.Item
                         label="Id"
                         name="id"
                         rules={[
@@ -79,7 +79,7 @@ const UserModal = (props) => {
                         ]}
                     >
                         <Input />
-                    </Form.Item>
+                    </Form.Item> */}
 
                     <Form.Item
                         label="Name"
