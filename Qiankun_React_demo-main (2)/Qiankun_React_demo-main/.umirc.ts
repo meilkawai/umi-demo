@@ -48,6 +48,15 @@ export default defineConfig({
   ],
   // 修改title
   title: 'umi-blog',
-
+  // chainWebpack(config) {
+  //   // 禁用 CSS Modules
+  //   config.module
+  //     .rule('css')
+  //     .use('css-loader')
+  //     .tap(options => {
+  //       options.modules = false;
+  //       return options;
+  //     });
+  // },
 
 });

@@ -1,6 +1,6 @@
-@img-width: 100px;
-@zhichi-font-highlight:#38BDBF;
-@zhichi-font-normal:#545D69;
+@import (reference) '../../pages/global_style.less';
+// @zhichi-font-highlight:#38BDBF;
+// @zhichi-font-normal:#545D69;
 
 // @img-height:68px;
 // 媒体查询
@@ -21,15 +21,15 @@
 
     li {
       &:hover {
-        cursor: pointer;
+        // cursor: pointer;
+        ._mouse(pointer)
       }
 
       &:active {
         color: @zhichi-font-highlight;
       }
 
-      font-size: 18px;
-      font-weight: bolder;
+      .font_(bold,18px);
       margin: 10px auto;
       color:@zhichi-font-normal;
       text-decoration: none;

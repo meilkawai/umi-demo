@@ -38,7 +38,10 @@ export const getDataAsyncService = async () => {
   return result 
 }
 export const editRecord = async (parmes) => {
-  console.log(parmes);
-  const result = await axios.put('/api/category/_token/update');
+  // console.log(parmes);
+  const {payLoad} = parmes.payLoad
+  const result = await axios.put('/category/_token/update',{
+      payLoad
+  });
   return result
 }

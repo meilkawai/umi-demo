@@ -1,6 +1,4 @@
-@zhichi-font-highlight: #38BDBF;
-@zhichi-font-normal: #545D69;
-@aside-width: 130px;
+@import (reference) '../../pages/global_style.less';
 
 .Tabs {
     // background-color: #e0dbdb;
@@ -9,13 +7,15 @@
     // margin-top: 60px;
     display: block;
     // width: 75%;
-    font-size: 24px;
-    font-weight: bold;
+    // font-size: 24px;
+    // font-weight: bold;
+    .font_(bold,24px);
     color: @zhichi-font-normal;
     margin-left: 10PX;
 
     &:hover {
-        color: @zhichi-font-highlight;
-        cursor: pointer;
+        // color: @zhichi-font-highlight;
+        // cursor: pointer;
+        ._mouse(@zhichi-font-highlight,pointer)
     }
 }
